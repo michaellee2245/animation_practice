@@ -1,0 +1,40 @@
+@import '../../mainStyles/standard-styles.scss';
+
+.about-container{
+ 
+    width:100vw;
+    height: 100vh;
+    background-color:lightcoral;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text{
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        font-size:16px;
+        font-weight: 700;
+    }
+
+    button{
+        width: 200px;
+        height: 50px;
+        background: none;
+        border:2px solid black;
+        margin-top:30px;
+        font-family: 'Oswald', sans-serif;
+        font-size:.75em;
+        letter-spacing: .5em;
+        font-weight:500;
+        text-transform: uppercase;
+
+        &:hover{
+            background-color:black;
+            color:lightcoral;
+            cursor: pointer;
+            transition:.2s;
+        }
+    }
+}
