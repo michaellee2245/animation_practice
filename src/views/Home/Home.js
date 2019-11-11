@@ -7,7 +7,7 @@ class Home extends Component {
         return (
             <div className="home-container">
                 <div className="text">The Home Page</div>
-                <Link to={'/about'}><button>Learn more</button></Link>
+                <Link to='/about'><button>Learn more</button></Link>
             </div>
         );
     }
