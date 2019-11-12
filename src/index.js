@@ -12,18 +12,18 @@ import routyRoutes from './routes.js';
 function Example() {
   return (
     <Router>
-        <div className="navi">
+        {/* <div className="navi">
             {routyRoutes.map(route => (
                 <NavLink key={route.path} to={route.path} activeClassName="active" exact>{route.name}</NavLink>
             ))}
-        </div>
+        </div> */}
       <div className="App">
         {routyRoutes.map( ({path, Component}) => (
             <Route key={path} exact path={path}>
                 {({ match }) => (
                 <CSSTransition
                     in={match != null}
-                    timeout={300}
+                    timeout={1500}
                     unmountOnExit
                 >
                     <div className="page">

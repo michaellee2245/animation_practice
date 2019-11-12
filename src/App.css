@@ -1,50 +1,53 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #09d3ac;
 }
 
 .page {
   position: absolute;
-  left: 15px;
-  right: 15px;
 }
 
 .enter {
-  opacity: 0;
-  transform: scale(1.1);
+  opacity: 1;
+  transform: translateX(100%);
+  transition:1s ease;
 }
 
 .enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 300ms, transform 300ms;
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
 }
 
 .exit {
   opacity: 1;
-  transform: scale(1);
+  transform: translateX(0%);
+  transition:1s ease;
 }
 
 .exit-active {
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 300ms, transform 300ms;
+  animation-name: slideLeft;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft{
+  0%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

@@ -7,7 +7,8 @@ class About extends Component {
         return (
             <div className="about-container">
                 <div className="text">The about us page</div>
-                <button><Link to="/">Return Home</Link></button>
+                <Link to="/"><button>Return Home</button></Link>
+                <Link to="/loader"><button>The Loader</button></Link>
             </div>
         );
     }
