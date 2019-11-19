@@ -16,6 +16,7 @@
         letter-spacing: .5em;
         font-size:16px;
         font-weight: 700;
+        margin-bottom:20px;
     }
 
     button{
@@ -29,6 +30,7 @@
         letter-spacing: .5em;
         font-weight:500;
         text-transform: uppercase;
+        opacity: 0;
 
         &:hover{
             background-color:black;
@@ -37,4 +39,22 @@
             transition:.2s;
         }
     }
+}
+.circle-container{
+    visibility: hidden;
+
+    .red{
+        background-color:#FD5151
+    }
+    .blue{
+        background-color: #51a0FD
+    }
+}
+.circle{
+    width:75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: #FDCF51;
+    margin:50px;
+
 }
